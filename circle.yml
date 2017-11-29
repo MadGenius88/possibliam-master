@@ -1,0 +1,10 @@
+checkout:
+  post:
+    - cp config/secrets.yml.example config/secrets.yml
+    - cp .rspec.example .rspec
+    - mkdir -p tmp/files
+
+test:
+  pre:
+    - bundle exec rubocop -D
+
